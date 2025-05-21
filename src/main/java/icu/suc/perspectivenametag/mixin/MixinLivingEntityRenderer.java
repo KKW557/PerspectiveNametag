@@ -12,11 +12,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntityRenderer.class)
 public class MixinLivingEntityRenderer {
-    @Inject(method = "hasLabel(Lnet/minecraft/entity/LivingEntity;)Z", at = @At(value = "RETURN", ordinal = 6), cancellable = true)
-    private void hasLabel(@NotNull LivingEntity livingEntity, @NotNull CallbackInfoReturnable<Boolean> cir) {
+    @Inject(method = "hasLabel(Lnet/minecraft/entity/LivingEntity;D)Z", at = @At(value = "RETURN", ordinal = 6), cancellable = true)
+    private void hasLabel(@NotNull LivingEntity livingEntity, double d, @NotNull CallbackInfoReturnable<Boolean> cir) {
         MinecraftClient minecraftClient = MinecraftClient.getInstance();
         ClientPlayerEntity clientPlayerEntity = minecraftClient.player;
-        boolean bl = !livingEntity.canSeePlayer(clientPlayerEntity);
+        boolean bl = !livingEntity.isInvisibleTo(clientPlayerEntity);
         cir.setReturnValue(MinecraftClient.isHudEnabled() && bl && !livingEntity.hasPassengers());
     }
 }

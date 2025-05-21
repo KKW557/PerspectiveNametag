@@ -94,5 +94,5 @@ publishing {
 }
 
 tasks.remapJar {
-    archiveBaseName = "${project.archivesBaseName}-fabric-1.15+1.20.6"
+    archiveBaseName = "${project.archivesBaseName}-fabric-1.21"
 }
