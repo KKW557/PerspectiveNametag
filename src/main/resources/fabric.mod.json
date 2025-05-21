@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "perspectivenametag",
+  "version": "${version}",
+  "name": "PerspectiveNametag",
+  "description": "Shows the player's nametag in second/third person perspective.",
+  "authors": [
+    "557"
+  ],
+  "contact": {
+    "repo": "https://github.com/KKW557/PerspectiveNametag",
+    "issues": "https://github.com/KKW557/PerspectiveNametag/issues",
+    "homepage": "https://modrinth.com/project/perspectivenametag"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "client",
+  "entrypoints": {},
+  "mixins": [
+    "perspectivenametag.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "1.14.*"
+  }
+}
