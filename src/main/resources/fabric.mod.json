@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "perspectivenametag",
   "version": "${version}",
-  "name": "PerspectiveNametag",
+  "name": "Perspective Nametag",
   "description": "Shows the player's nametag in second/third person perspective.",
   "authors": [
     "557"
@@ -15,7 +15,6 @@
   "license": "MIT",
   "icon": "icon.png",
   "environment": "client",
-  "entrypoints": {},
   "mixins": [
     "perspectivenametag.mixins.json"
   ],
