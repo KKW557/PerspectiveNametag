@@ -1,16 +1,13 @@
 val minecraft = libs.versions.minecraft.get()
 
-val targetJavaVersion = 8
+val targetJavaVersion = 25
 
 subprojects {
     project.version = "${project.version}+${minecraft}"
 
     plugins.withId("java") {
         extensions.configure<JavaPluginExtension> {
-            val javaVersion = JavaVersion.toVersion(targetJavaVersion)
-            if (JavaVersion.current() < javaVersion) {
-                toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-            }
+            toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
             withSourcesJar()
         }
 

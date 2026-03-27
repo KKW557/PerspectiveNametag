@@ -4,8 +4,7 @@ plugins {
 
 dependencies {
     minecraft(libs.minecraft)
-    mappings(libs.yarn)
-    modImplementation(libs.fabric.loader)
+    implementation(libs.fabric.loader)
     implementation(project(":perspectivenametag-core"))
 }
 

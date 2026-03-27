@@ -1,9 +1,9 @@
 package icu.suc.kkw557.perspectivenametag.fabric.mixin;
 
 import icu.suc.kkw557.perspectivenametag.PerspectiveNametag;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.entity.LivingEntityRenderer;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.LivingEntityRenderer;
+import net.minecraft.world.entity.LivingEntity;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,9 +12,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntityRenderer.class)
 public abstract class MixinLivingEntityRenderer {
-    @Inject(method = "hasLabel(Lnet/minecraft/entity/LivingEntity;D)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isHudEnabled()Z"), cancellable = true)
+    @Inject(method = "shouldShowName(Lnet/minecraft/world/entity/LivingEntity;D)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;renderNames()Z"), cancellable = true)
     private void injectHasLabel(@NotNull LivingEntity livingEntity, double d, @NotNull CallbackInfoReturnable<Boolean> cir) {
         if (PerspectiveNametag.DISABLED) return;
-        cir.setReturnValue(MinecraftClient.isHudEnabled() && !livingEntity.isInvisibleTo(MinecraftClient.getInstance().player) && !livingEntity.hasPassengers());
+        //noinspection DataFlowIssue
+        cir.setReturnValue(Minecraft.renderNames() && !livingEntity.isInvisibleTo(Minecraft.getInstance().player) && !livingEntity.isVehicle());
     }
 }
