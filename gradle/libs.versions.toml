@@ -3,13 +3,11 @@ minecraft = "1.15"
 fabric-loom = "1.11-SNAPSHOT"
 fabric-loader = "0.1.0.48"
 yarn = "1.15+build.2"
-mixin = "0.8.7"
 
 [libraries]
 minecraft = { group = "com.mojang", name = "minecraft", version.ref = "minecraft" }
 fabric-loader = { group = "net.fabricmc", name = "fabric-loader", version.ref = "fabric-loader" }
 yarn = { group = "net.fabricmc", name = "yarn", version.ref = "yarn" }
-mixin = { group = "org.spongepowered", name = "mixin", version.ref = "mixin" }
 
 [plugins]
 fabric-loom = { id = "fabric-loom", version.ref = "fabric-loom" }
