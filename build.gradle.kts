@@ -1,0 +1,28 @@
+val minecraft = libs.versions.minecraft.get()
+
+val targetJavaVersion = 8
+
+subprojects {
+    project.version = "${project.version}+${minecraft}"
+
+    plugins.withId("java") {
+        extensions.configure<JavaPluginExtension> {
+            val javaVersion = JavaVersion.toVersion(targetJavaVersion)
+            if (JavaVersion.current() < javaVersion) {
+                toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+            }
+            withSourcesJar()
+        }
+
+        tasks.withType<JavaCompile>().configureEach {
+            options.encoding = "UTF-8"
+            options.release.set(targetJavaVersion)
+        }
+
+        tasks.withType<Jar>().configureEach {
+            from(rootProject.file("LICENSE")) {
+                into("META-INF")
+            }
+        }
+    }
+}
