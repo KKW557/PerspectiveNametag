@@ -12,9 +12,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntityRenderer.class)
 public abstract class MixinLivingEntityRenderer {
-    @Inject(method = "hasLabel(Lnet/minecraft/entity/LivingEntity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isHudEnabled()Z"), cancellable = true)
-    private void injectHasLabel(@NotNull LivingEntity livingEntity, @NotNull CallbackInfoReturnable<Boolean> cir) {
+    @Inject(method = "hasLabel(Lnet/minecraft/entity/LivingEntity;D)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isHudEnabled()Z"), cancellable = true)
+    private void injectHasLabel(@NotNull LivingEntity livingEntity, double d, @NotNull CallbackInfoReturnable<Boolean> cir) {
         if (PerspectiveNametag.DISABLED) return;
-        cir.setReturnValue(MinecraftClient.isHudEnabled() && !livingEntity.canSeePlayer(MinecraftClient.getInstance().player) && !livingEntity.hasPassengers());
+        cir.setReturnValue(MinecraftClient.isHudEnabled() && !livingEntity.isInvisibleTo(MinecraftClient.getInstance().player) && !livingEntity.hasPassengers());
     }
 }
