@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "icu.suc.kkw557.perspectivenametag.fabric.mixin",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [
+  "client": [
     "MixinLivingEntityRenderer"
   ],
   "injectors": {
