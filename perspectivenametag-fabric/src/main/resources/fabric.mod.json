@@ -15,6 +15,11 @@
   "license": "MIT",
   "icon": "pack.png",
   "environment": "client",
+  "entrypoints": {
+    "client": [
+      "icu.suc.kkw557.perspectivenametag.fabric.Client"
+    ]
+  },
   "mixins": [
     {
       "environment": "client",
