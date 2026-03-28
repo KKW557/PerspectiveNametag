@@ -16,7 +16,10 @@
   "icon": "pack.png",
   "environment": "client",
   "mixins": [
-    "perspectivenametag.mixins.json"
+    {
+      "environment": "client",
+      "config": "perspectivenametag.client.mixins.json"
+    }
   ],
   "depends": {
     "fabricloader": ">=${loader}",
