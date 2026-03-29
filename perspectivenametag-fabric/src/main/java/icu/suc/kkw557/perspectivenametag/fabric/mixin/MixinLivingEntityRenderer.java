@@ -15,7 +15,10 @@ public abstract class MixinLivingEntityRenderer {
     @Inject(method = "shouldShowName(Lnet/minecraft/world/entity/LivingEntity;D)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;renderNames()Z"), cancellable = true)
     private void injectHasLabel(@NotNull LivingEntity livingEntity, double d, @NotNull CallbackInfoReturnable<Boolean> cir) {
         if (PerspectiveNametag.DISABLED) return;
+        var mc = Minecraft.getInstance();
+        var server = mc.getCurrentServer();
+        if (server != null && PerspectiveNametag.BLACKLIST.contains(server.ip)) return;
         //noinspection DataFlowIssue
-        cir.setReturnValue(Minecraft.renderNames() && !livingEntity.isInvisibleTo(Minecraft.getInstance().player) && !livingEntity.isVehicle());
+        cir.setReturnValue(Minecraft.renderNames() && !livingEntity.isInvisibleTo(mc.player) && !livingEntity.isVehicle());
     }
 }
