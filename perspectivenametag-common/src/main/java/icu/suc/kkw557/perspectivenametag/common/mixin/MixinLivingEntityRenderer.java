@@ -1,4 +1,4 @@
-package icu.suc.kkw557.perspectivenametag.fabric.mixin;
+package icu.suc.kkw557.perspectivenametag.common.mixin;
 
 import icu.suc.kkw557.perspectivenametag.PerspectiveNametag;
 import net.minecraft.client.Minecraft;

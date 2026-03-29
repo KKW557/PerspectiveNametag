@@ -23,7 +23,7 @@
   "mixins": [
     {
       "environment": "client",
-      "config": "perspectivenametag.client.mixins.json"
+      "config": "perspectivenametag.mixins.json"
     }
   ],
   "depends": {

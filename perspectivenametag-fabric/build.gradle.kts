@@ -6,6 +6,7 @@ dependencies {
     minecraft(libs.minecraft)
     implementation(libs.fabric.loader)
     implementation(project(":perspectivenametag-core"))
+    implementation(project(":perspectivenametag-common"))
 }
 
 loom {
@@ -13,9 +14,10 @@ loom {
         main {
             java {
                 srcDir(project(":perspectivenametag-core").sourceSets.main.get().java.srcDirs)
+                srcDir(project(":perspectivenametag-common").sourceSets.main.get().java.srcDirs)
             }
             resources {
-                srcDir(project(":perspectivenametag-core").sourceSets.main.get().resources.srcDirs)
+                srcDir(project(":perspectivenametag-common").sourceSets.main.get().resources.srcDirs)
             }
         }
     }

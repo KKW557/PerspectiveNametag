@@ -11,5 +11,7 @@ pluginManagement {
 
 include(
     "perspectivenametag-core",
-    "perspectivenametag-fabric"
+    "perspectivenametag-common",
+    "perspectivenametag-fabric",
+    "perspectivenametag-forge"
 )
