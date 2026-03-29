@@ -1,0 +1,22 @@
+modLoader = "javafml"
+loaderVersion = "[${loader},)"
+license = "MIT"
+issueTrackerURL = "https://github.com/KKW557/PerspectiveNametag/issues"
+[[mods]]
+modId = "perspectivenametag"
+version = "${version}"
+displayName = "Perspective Nametag"
+displayURL = "https://modrinth.com/mod/perspectivenametag"
+logoFile = "pack.png"
+authors = "557"
+description = '''
+Shows the player's nametag in second/third person perspective.
+'''
+[[dependencies.perspectivenametag]]
+modId="minecraft"
+type = "required"
+versionRange="[${minecraft},)"
+ordering="NONE"
+side="CLIENT"
+[[mixins]]
+config="perspectivenametag.mixins.json"

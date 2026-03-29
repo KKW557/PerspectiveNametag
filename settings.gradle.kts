@@ -13,5 +13,6 @@ include(
     "perspectivenametag-core",
     "perspectivenametag-common",
     "perspectivenametag-fabric",
-    "perspectivenametag-forge"
+    "perspectivenametag-forge",
+    "perspectivenametag-neoforge"
 )
