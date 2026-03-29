@@ -13,3 +13,9 @@ authors = "557"
 description = '''
 Shows the player's nametag in second/third person perspective.
 '''
+[[dependencies.perspectivenametag]]
+modId="minecraft"
+mandatory=true
+versionRange="[${minecraft},)"
+ordering="NONE"
+side="CLIENT"
