@@ -2,6 +2,7 @@ package icu.suc.kkw557.perspectivenametag.fabric.mixin;
 
 import icu.suc.kkw557.perspectivenametag.PerspectiveNametag;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ServerInfo;
 import net.minecraft.client.render.entity.LivingEntityRenderer;
 import net.minecraft.entity.LivingEntity;
 import org.jetbrains.annotations.NotNull;
@@ -15,6 +16,9 @@ public abstract class MixinLivingEntityRenderer {
     @Inject(method = "hasLabel(Lnet/minecraft/entity/LivingEntity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isHudEnabled()Z"), cancellable = true)
     private void injectHasLabel(@NotNull LivingEntity livingEntity, @NotNull CallbackInfoReturnable<Boolean> cir) {
         if (PerspectiveNametag.DISABLED) return;
-        cir.setReturnValue(MinecraftClient.isHudEnabled() && !livingEntity.canSeePlayer(MinecraftClient.getInstance().player) && !livingEntity.hasPassengers());
+        MinecraftClient mc = MinecraftClient.getInstance();
+        ServerInfo server = mc.getCurrentServerEntry();
+        if (server != null && PerspectiveNametag.BLACKLIST.contains(server.address)) return;
+        cir.setReturnValue(MinecraftClient.isHudEnabled() && !livingEntity.canSeePlayer(mc.player) && !livingEntity.hasPassengers());
     }
 }
