@@ -1,6 +1,9 @@
 # Perspective Nametag
 
-[![Modrinth Downloads](https://img.shields.io/modrinth/dt/perspectivenametag)](https://modrinth.com/mod/perspectivenametag)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/KKW557/PerspectiveNametag/gradle.yml)
+![GitHub Release](https://img.shields.io/github/v/release/KKW557/PerspectiveNametag)
+![Modrinth Downloads](https://img.shields.io/modrinth/dt/perspectivenametag?logo=modrinth)
+![CurseForge Downloads](https://img.shields.io/curseforge/dt/1499392?logo=curseforge)
 
 A mod to show the player's nametag in second/third person perspective.
 
