@@ -24,5 +24,18 @@ subprojects {
                 into("META-INF")
             }
         }
+
+        apply(plugin = "maven-publish")
+        extensions.configure<PublishingExtension> {
+            publications {
+                create<MavenPublication>("mavenJava") {
+                    from(components["java"])
+                }
+            }
+
+            repositories {
+                maven { url = uri(rootProject.layout.buildDirectory.dir("repository")) }
+            }
+        }
     }
 }
