@@ -1,7 +1,9 @@
 # Perspective Nametag
 
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/KKW557/PerspectiveNametag/gradle.yml)](https://github.com/KKW557/PerspectiveNametag/actions/workflows/gradle.yml)
-[![GitHub Release](https://img.shields.io/github/v/release/KKW557/PerspectiveNametag)](https://github.com/KKW557/PerspectiveNametag/releases/latest)
+[![GitHub License](https://img.shields.io/github/license/KKW557/perspectivenametag)](https://github.com/KKW557/perspectivenametag?tab=MIT-1-ov-file#readme)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/KKW557/perspectivenametag/gradle.yml)](https://github.com/KKW557/perspectivenametag/actions/workflows/gradle.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/KKW557/perspectivenametag)](https://github.com/KKW557/perspectivenametag/releases/latest)
+
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/perspectivenametag?logo=modrinth)](https://modrinth.com/mod/perspectivenametag)
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/1499392?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/perspectivenametag)
 
@@ -33,4 +35,4 @@ See `icu.suc.kkw557.perspectivenametag.PerspectiveNametag` for details.
 
 ## License
 
-[MIT](LICENSE)
+This project is licensed under the [MIT License](LICENSE) © 2025 557.
