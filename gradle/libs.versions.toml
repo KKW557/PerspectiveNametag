@@ -1,8 +1,8 @@
 [versions]
-minecraft = "1.7"
+minecraft = "1.8"
 fabric-loom = "1.11-SNAPSHOT"
 fabric-loader = "0.10.7"
-yarn = "1.7+build.604"
+yarn = "1.8+build.604"
 
 [libraries]
 minecraft = { group = "com.mojang", name = "minecraft", version.ref = "minecraft" }

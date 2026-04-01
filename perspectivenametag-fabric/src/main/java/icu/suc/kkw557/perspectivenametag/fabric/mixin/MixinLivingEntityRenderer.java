@@ -13,12 +13,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntityRenderer.class)
 public abstract class MixinLivingEntityRenderer {
-    @Inject(method = "method_5781", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isHudEnabled()Z"), cancellable = true)
+    @Inject(method = "hasLabel(Lnet/minecraft/entity/LivingEntity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isHudEnabled()Z"), cancellable = true)
     private void injectHasLabel(@NotNull LivingEntity livingEntity, @NotNull CallbackInfoReturnable<Boolean> cir) {
         if (PerspectiveNametag.DISABLED) return;
         MinecraftClient mc = MinecraftClient.getInstance();
         ServerInfo server = mc.getCurrentServerEntry();
         if (server != null && PerspectiveNametag.BLACKLIST.contains(server.address)) return;
-        cir.setReturnValue(MinecraftClient.isHudEnabled() && !livingEntity.isInvisibleTo(mc.field_3805) && livingEntity.rider == null);
+        cir.setReturnValue(MinecraftClient.isHudEnabled() && !livingEntity.isInvisibleTo(mc.player) && livingEntity.rider == null);
     }
 }
