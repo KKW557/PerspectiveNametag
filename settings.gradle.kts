@@ -6,6 +6,10 @@ pluginManagement {
             name = "FabricMC"
             url = uri("https://maven.fabricmc.net/")
         }
+        maven {
+            name = "legacy-fabric"
+            url = uri("https://maven.legacyfabric.net/")
+        }
     }
 }
 

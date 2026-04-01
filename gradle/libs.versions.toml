@@ -1,13 +1,13 @@
 [versions]
-minecraft = "1.14"
+minecraft = "1.7"
 fabric-loom = "1.11-SNAPSHOT"
 fabric-loader = "0.10.7"
-yarn = "1.14+build.21"
+yarn = "1.7+build.604"
 
 [libraries]
 minecraft = { group = "com.mojang", name = "minecraft", version.ref = "minecraft" }
 fabric-loader = { group = "net.fabricmc", name = "fabric-loader", version.ref = "fabric-loader" }
-yarn = { group = "net.fabricmc", name = "yarn", version.ref = "yarn" }
+yarn = { group = "net.legacyfabric", name = "yarn", version.ref = "yarn" }
 
 [plugins]
-fabric-loom = { id = "fabric-loom", version.ref = "fabric-loom" }
+fabric-loom = { id = "legacy-looming", version.ref = "fabric-loom" }
