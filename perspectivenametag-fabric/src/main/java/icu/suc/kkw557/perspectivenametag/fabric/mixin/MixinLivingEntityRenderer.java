@@ -19,6 +19,6 @@ public abstract class MixinLivingEntityRenderer {
         MinecraftClient mc = MinecraftClient.getInstance();
         ServerInfo server = mc.getCurrentServerEntry();
         if (server != null && PerspectiveNametag.BLACKLIST.contains(server.address)) return;
-        cir.setReturnValue(MinecraftClient.isHudEnabled() && !livingEntity.isInvisibleTo(mc.player) && livingEntity.rider == null);
+        cir.setReturnValue(MinecraftClient.isHudEnabled() && !livingEntity.isInvisibleTo(mc.player) && livingEntity.hasPassengers());
     }
 }
