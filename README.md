@@ -1,7 +1,7 @@
 # Perspective Nametag
 
 [![GitHub License](https://img.shields.io/github/license/KKW557/perspectivenametag)](https://github.com/KKW557/perspectivenametag?tab=MIT-1-ov-file#readme)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/KKW557/perspectivenametag/gradle.yml)](https://github.com/KKW557/perspectivenametag/actions/workflows/gradle.yml)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/KKW557/perspectivenametag/build.yml)](https://github.com/KKW557/perspectivenametag/actions/workflows/build.yml)
 [![GitHub Release](https://img.shields.io/github/v/release/KKW557/perspectivenametag)](https://github.com/KKW557/perspectivenametag/releases/latest)
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/perspectivenametag?logo=modrinth)](https://modrinth.com/mod/perspectivenametag)
