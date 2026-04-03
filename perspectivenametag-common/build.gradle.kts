@@ -2,8 +2,13 @@ plugins {
     alias(libs.plugins.fabric.loom)
 }
 
+repositories {
+    maven("https://repo.spongepowered.org/maven/")
+}
+
 dependencies {
     minecraft(libs.minecraft)
-    implementation(libs.fabric.loader)
+    mappings(loom.officialMojangMappings())
+    implementation(libs.mixin)
     implementation(project(":perspectivenametag-core"))
 }
