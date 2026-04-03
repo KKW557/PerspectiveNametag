@@ -3,8 +3,8 @@ plugins {
 }
 
 repositories {
-    maven { url = uri("https://libraries.minecraft.net/") }
-    maven { url = uri("https://files.minecraftforge.net/maven") }
+    maven("https://libraries.minecraft.net/")
+    maven("https://files.minecraftforge.net/maven")
 }
 
 dependencies {
