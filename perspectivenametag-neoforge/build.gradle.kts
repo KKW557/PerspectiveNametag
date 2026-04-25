@@ -20,13 +20,13 @@ tasks.processResources {
 
     inputs.property("version", project.version)
     inputs.property("minecraft", libs.versions.minecraft.get())
-    inputs.property("loader", libs.versions.neoforge.loaderVersion.get())
+    inputs.property("loaderVersion", libs.versions.neoforge.loaderVersion.get())
 
     filesMatching("META-INF/neoforge.mods.toml") {
         expand(
             "version" to version,
             "minecraft" to libs.versions.minecraft.get(),
-            "loader" to libs.versions.neoforge.loaderVersion.get()
+            "loaderVersion" to libs.versions.neoforge.loaderVersion.get()
         )
     }
 }

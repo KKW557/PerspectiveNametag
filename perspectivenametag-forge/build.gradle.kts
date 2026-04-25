@@ -21,13 +21,13 @@ tasks.processResources {
 
     inputs.property("version", project.version)
     inputs.property("minecraft", libs.versions.minecraft.get())
-    inputs.property("loader", libs.versions.forge.loaderVersion.get())
+    inputs.property("loaderVersion", libs.versions.forge.loaderVersion.get())
 
     filesMatching("META-INF/mods.toml") {
         expand(
             "version" to version,
             "minecraft" to libs.versions.minecraft.get(),
-            "loader" to libs.versions.forge.loaderVersion.get()
+            "loaderVersion" to libs.versions.forge.loaderVersion.get()
         )
     }
 }
