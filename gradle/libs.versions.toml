@@ -1,10 +1,10 @@
 [versions]
-minecraft = "26.1"
+minecraft = "26.2"
 fabric-loom = "1.14-SNAPSHOT"
 fabric-loader = "0.18.3"
-forge-loaderVersion = "62"
-fmlloader = "26.1-62.0.4"
-javafmllanguage = "26.1-62.0.4"
+forge-loaderVersion = "65"
+fmlloader = "26.2-65.0.0"
+javafmllanguage = "26.2-65.0.0"
 neoforge-loaderVersion = "11"
 fancymodloader-loader = "11.0.6"
 
