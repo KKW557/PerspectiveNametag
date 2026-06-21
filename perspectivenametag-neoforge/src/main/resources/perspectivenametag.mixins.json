@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "icu.suc.kkw557.perspectivenametag.common.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "MixinLivingEntityRenderer"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
